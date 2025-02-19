@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#right-wheel,
+#left-wheel {
+    animation: wheel 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#other-sections {
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+@keyframes bike {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(20deg);
+    }
+}
+
+#hair {
+    animation: hair 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes hair {
+    from {
+        transform: translateY(0%) rotateZ(0deg);
+    }
+    to {
+        transform: translateY(25%) rotateZ(5deg);
+    }
+}
+
+#light-bicycle {
+    animation: lighting 1s ease-in-out infinite alternate;
+}
+
+@keyframes lighting {
+    from {
+        fill: #4fa8b4;
+    }
+    to {
+        fill: #22cce2;
+    }
+}
+
+#sun {
+    animation: sunLighting 3s ease-in-out infinite alternate;
+}
+
+@keyframes sunLighting {
+    from {
+        fill: #fd6a65;
+    }
+    to {
+        fill: #fdc865;
+    }
+}
+
+#cloud-right {
+    animation: cloudRight 3s ease-in-out infinite alternate;
+}
+@keyframes cloudRight {
+    from {
+        transform: translateX(-10%);
+    }
+    to {
+        transform: translateX(5%);
+    }
+}
+
+#cloud-left {
+    animation: cloudLeft 3s ease-in-out infinite alternate;
+}
+
+@keyframes cloudLeft {
+    from {
+        transform: translateX(10%);
+    }
+    to {
+        transform: translateX(-5%);
+    }
+}
+
+#svg-animation {
+    animation: svg 2s ease-in-out;
+}
+@keyframes svg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
